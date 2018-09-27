@@ -2,13 +2,13 @@ fetch('https://api.foursquare.com/v2/venues/explore?client_id=EL0HV0FHVY0GUKYDBX
     .then(response => response.json());
 
 $(document).ready(function(){
-        function getData(response){
-            $('main').css("display","grid");
+    function getImage(response){
+        $('main').css("display","grid");
     }  
 
 
     function homeTemplate(){
-        getData();
+        getImage();
         $('.main').append(`<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -38,8 +38,8 @@ $(document).ready(function(){
         console.log('home');
     }
 
-    function placesTemplate(){
-        getData();
+    function modal(){
+        getImage();
         $('.main').append(`<div class='images' data-toggle="modal" data-target="#modal"></div>
         <div class="modal fade" id="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -59,11 +59,19 @@ $(document).ready(function(){
           </div>
         </div>
       </div>`);
+    }
+
+    function placesTemplate(){
+        getImage();
+        modal();
+        
       console.log('places');
     }
 
     function favoritesTemplate(){
-        getData();
+        getImage();
+        modal();
+
         console.log('fav');
     }
 })
