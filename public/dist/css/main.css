@@ -1,28 +1,35 @@
 .navbar-brand{
     font-family: 'Pacifico', cursive;
-    font-size: 170%;
+    font-size: 200%;
 }
 
 *{
     font-family: 'Playfair Display', serif;
 }
-.icon-twitter:before {
-    content: "\ea96";
-}
-.icon-instagram:before {
-    content: "\ea92";
-}
-.icon-facebook2:before {
-    content: "\ea91";
-}
-.icon-google-plus2:before {
-    content: "\ea8c";
-}
 
 main{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: auto auto auto;
-    background: magenta;
+    background: #f8f8f8;
     width: 100%;
+}
+
+.carousel-item.active{
+    width: 13rem;
+}
+
+.places{
+    display: flex;
+    height: 30rem;
+    flex-wrap: wrap-reverse;
+    align-content: space-around;
+    justify-content: space-evenly;
+}
+
+.place{
+    flex: wrap;
+}
+
+.carousel-inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
