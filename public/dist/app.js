@@ -6,7 +6,7 @@ async function getImage(){
     return
   }
   for(var i = 0 ; i < imageID.length ; i++){
-    response = await fetch("https://api.foursquare.com/v2/venues/" + imageID[i] + "/photos?client_id=EL0HV0FHVY0GUKYDBXJIACLRQTQ43TD15QJCZSLP2IGTNTCU&client_secret=WJVP5G4QZWIVQGFU41AZ2TFR51QVVW23PTV3PW10QXOPU15E&v=20180323&limit=10");
+    response = await fetch("https://api.foursquare.com/v2/venues/" + imageID[i] + "/photos?client_id=OENUJYRQA5FGSJ1U30S0SUHINZCHCTO3KOMED54QPV2DQLDX&client_secret=RN4BYXGLPGEFJUZB35TT3YWU4J4AVWRO350JXRI32DUS44KJ&v=20180323&limit=10");
     route = await response.json();
     route.response.photos.items.forEach(function(item){
       image.push(item.prefix + "300" + item.suffix);
